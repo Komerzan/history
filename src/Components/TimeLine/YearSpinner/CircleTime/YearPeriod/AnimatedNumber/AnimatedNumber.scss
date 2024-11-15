@@ -1,0 +1,25 @@
+.number {
+	font-weight: 700;
+	font-size: 200px;
+	line-height: 160px;
+	letter-spacing: -2%;
+}
+
+
+@media screen and (max-width: 481px) and (min-width: 0px) {
+	.number{
+		font-size: 56px;
+		margin-bottom: 58px;
+	}
+}
+@media screen and (max-width: 600px) and (min-width: 481px) {
+	.number{
+		font-size: 130px;
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 601px) {
+	.number{
+		font-size: 160px;
+	}
+}

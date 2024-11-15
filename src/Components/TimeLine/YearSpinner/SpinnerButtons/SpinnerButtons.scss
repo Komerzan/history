@@ -1,0 +1,31 @@
+@use '../../../../variables.module.scss' as *;
+
+.spinner_control{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.spinner_buttons {
+  display: flex;
+	gap: 8px;
+  margin-right: 38px;
+
+	&:nth-child(1) {
+		transform: rotate(60);
+	}
+}
+
+.btn.disabled{
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 481) and (min-width: 0px) {
+  .spinner_control{
+    display: flex;
+  }
+	.spinner_buttons {
+		align-items: start;
+    gap: 8px;
+	}
+}

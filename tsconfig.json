@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"target": "es5", // Устанавливаем целевой стандарт JavaScript
+		"lib": ["dom", "esnext"], // Подключаем библиотеки
+		"jsx": "react", // Указываем, что проект использует JSX
+		"module": "esnext", // Используем модуль ESNext
+		"moduleResolution": "node", // Решение модулей через Node.js
+		"esModuleInterop": true, // Включаем совместимость с CommonJS
+		"strict": true, // Включаем строгий режим TypeScript
+		"skipLibCheck": true, // Пропускаем проверку библиотек
+		"forceConsistentCasingInFileNames": true // Принудительная проверка регистров
+	},
+	"include": [
+		"src/**/*" // Включаем все файлы в папке src
+, "@types/global.d.ts"	]
+}

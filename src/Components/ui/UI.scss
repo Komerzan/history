@@ -1,0 +1,30 @@
+@use '../../variables.module.scss' as *;
+
+.spinner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: 5px 10px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: white;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	border: 1px solid $grey;
+}
+
+.secondImg {
+	display: none;
+	width: 4px;
+	height: 6.25px;
+}
+@media screen and (max-width: 480px) {
+	.firstImg {
+		display: none;
+	}
+
+	.secondImg {
+		display: flex;
+	}
+}

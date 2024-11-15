@@ -1,0 +1,36 @@
+.year_wrapper {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.category {
+	display: none;
+}
+
+@media screen and (max-width: 481px) and (min-width: 0px) {
+	.controls {
+		display: none;
+	}
+
+	.year_wrapper {
+		display: block;
+	}
+
+	.category {
+		display: block;
+		position: absolute;
+		top: 80%;
+		font-weight: 700;
+		color: #42567a;
+		animation: opaciti 1.5s;
+	}
+}
+
+@keyframes opaciti {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

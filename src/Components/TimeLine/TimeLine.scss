@@ -1,0 +1,96 @@
+@use '../../variables.module.scss' as *;
+
+.timeline_wrapper {
+	position: relative;
+	max-width: 1400px;
+	position: relative;
+	padding-top: 59px;
+	margin: 0 auto;
+	background-color: $white;
+	padding-left: 78px;
+}
+
+.title {
+	position: absolute;
+	color: $grey;
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 120%;
+	letter-spacing: 0%;
+	max-width: 353px;
+	&::before {
+		content: '';
+		position: absolute;
+		left: -78px;
+		top: 0;
+		bottom: 0;
+		width: 4px;
+		background: linear-gradient(#3877ee, #ef5da8);
+	}
+}
+
+.pagination {
+	display: flex;
+	gap: 10px;
+	.pagination_dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: $grey;
+		opacity: 0.5;
+		transition: all 0.3s;
+		&.active {
+			opacity: 1;
+			background-color: $grey;
+		}
+	}
+}
+
+.control {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.timeline_wrapper {
+		position: relative;
+		padding-left: 20px;
+		margin: 0 auto;
+		background-color: $white;
+	}
+	.title {
+		font-size: 40px;
+		max-width: 300px;
+	}
+}
+
+@media screen and (max-width: 481px) and (min-width: 0px) {
+	.timeline_wrapper {
+		position: relative;
+		padding-left: 20px;
+		margin: 0 auto;
+		background-color: $white;
+	}
+	.title {
+		position: static;
+		display: flex;
+		font-size: 20px;
+		max-width: 120px;
+		line-break: auto;
+		&::before {
+			display: none;
+		}
+	}
+
+	.control {
+		position: absolute;
+		bottom: -120px;
+		display: flex;
+		align-items: center;
+		margin-top: 70px;
+		gap: px;
+		.spinner {
+			width: 25px;
+			height: 25px;
+		}
+	}
+}

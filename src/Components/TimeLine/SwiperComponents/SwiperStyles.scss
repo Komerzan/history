@@ -1,0 +1,84 @@
+@use '../../../variables.module.scss' as *;
+
+.swiper {
+	overflow: hidden !important;
+	margin-top: 56px;
+	width: 100%;
+
+	@media screen and (max-width: 480px) {
+		padding-top: 20px;
+		margin-top: 0;
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	background-color: $white;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	box-shadow: 0 0 15px 0 #3878ee25;
+
+	&::after {
+		display: none;
+	}
+
+	&.swiper-button-prev {
+		transform: rotate(180deg);
+	}
+
+	&.swiper-button-disabled {
+		display: none !important;
+	}
+
+	@media screen and (max-width: 480px) {
+		display: none;
+	}
+}
+
+.slider_content {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	min-height: 135px;
+	max-height: 200px;
+	overflow-y: auto;
+	gap: 14px;
+	animation: fadeIn 1.3s;
+
+	p {
+		margin: 0;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.description {
+	font-size: 20px;
+	line-height: 1.5;
+	color: $grey;
+	overflow-y: auto;
+	height: 150px;
+
+	@media screen and (max-width: 480px) {
+		font-size: 14px;
+	}
+}
+
+.year {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 25px;
+	line-height: 1.2;
+	color: $blue;
+
+	@media screen and (max-width: 480px) {
+		font-size: 16px;
+	}
+}

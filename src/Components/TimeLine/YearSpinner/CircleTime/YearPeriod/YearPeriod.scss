@@ -1,0 +1,29 @@
+.year_period {
+	position: absolute;
+	display: flex;
+	gap: 120px;
+	justify-content: center;
+	width: 100%;
+}
+
+
+@media screen and (max-width: 481px) and (min-width: 0px) {
+	.year_period {
+		position: static;
+		gap: 35px;
+		width: fit-content;
+		border-bottom: 1px solid #C7CDD9;
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 601px) {
+	.year_period{
+		gap: 80px;
+	}
+}
+
+@media screen and (max-width: 600px) and (min-width: 481px) {
+	.year_period{
+		gap: 40px;
+	}
+}
